@@ -1,0 +1,30 @@
+    <section class="page-container">
+    <div class="scrollable-section">
+    <div class="container">
+      <h4 style="margin-bottom: 20px;text-align: center;">Résultat...</h4>
+        <div class="row az" id="bloc">
+        <?php foreach ($get_ecole as $ecole) : ?>
+            <div class="col-md-3 col-sm-6 col-6 custom-bg" style="cursor: pointer;">
+                <!-- Bloc 1 -->
+              <a href="school-details.php?id=<?=$ecole["id_ecole"]?>">
+                <img src="<?=$ecole["img"]?>" alt="<?=$ecole["nom_ecole"]?>" class="img-fluid" style="border-radius: 10px;">
+                <p style="text-align: center;font-weight: bolder;color: black;"><?=$ecole["nom_ecole"]?></p>
+                <div class="overlay">
+                    <p><?=$ecole["description"]?></p>
+                </div>
+              </a>
+            </div>
+        <?php endforeach; ?>
+            <!-- <div class="col-md-3 col-sm-6 col-6 custom-bg" style="cursor: pointer;">
+                
+                <img src="https://wallpapercave.com/wp/wp3191390.jpg" alt="Image 1" class="img-fluid" style="border-radius: 10px;">
+                <p>Texte pour le bloc 1</p>
+                <div class="overlay">
+                    <p>Texte compact pour le bloc 1. Texte compact pour le bloc 1. Texte compact pour le bloc 1.</p>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+    </div>
+    </section>
